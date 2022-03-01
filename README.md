@@ -1,3 +1,5 @@
+#BACK-END
+
 # Desafio Técnico - Empresa ETEG
 
 ### Descrição do projeto :seedling:
@@ -33,16 +35,64 @@ Desenvolver uma aplicação web para fazer uma gestão básica de estoque de uma
 ### Pré-requisitos :thumbsup:
 
 - JDK 8 e Maven
-- IntelliJ ou Eclipse
+- Node e Yarn
+- Pgadmin
+- Eclipse
+- VSCode
 
 ### Foi utilizado :point_down:
 
-- Gitmoji Plus (plugin)
+- Spring Boot
+- React
+- PostgreSQL
+- JPA
+- Lombok
+- JUnit 5
+- Tokens JWT
+- Bootstrap
+- Bootswatch
+- Axios
+- Primereact
+- Heroku
+
+### Scripts do banco :point_down:
+
+CREATE DATABASE desafioeteg
+
+CREATE SCHEMA desafio
+
+CREATE TABLE desafio.usuario
+(
+  id bigserial NOT NULL PRIMARY KEY,
+  nome character varying(150),
+  email character varying(100),
+  senha character varying(255),
+  data_cadastro date default now()
+);
+
+CREATE TABLE desafio.locacao
+(
+  id bigserial NOT NULL PRIMARY KEY ,
+  filme character varying(100) NOT NULL,
+  mes integer NOT NULL,
+  ano integer NOT NULL,
+  valor numeric(16,2),
+  tipo character varying(20),
+  status character varying(20),
+  id_usuario bigint REFERENCES desafio.usuario (id),
+  data_cadastro date default now()
+);
 
 ### Instalação da aplicação :point_down:
 
-- IntelliJ/Eclipse: Importar como projeto Maven.
+- Eclipse: Importar backedn como projeto Maven.
+- VSCode: Abrir pasta do frontend
     
 ### Iniciar aplicação :point_down:
 
-- Rodar a classe DesafioetegApplication
+- Rodar a classe DesafioetegApplication (backend)
+- Rodar `yarn start` na raiz do projeto (frontend)
+
+### URL publicada da aplicação :technologist:
+
+https://desafioeteg.herokuapp.com
