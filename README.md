@@ -1,10 +1,10 @@
-#BACK-END
+# BACK-END
 
 # Desafio Técnico - Empresa ETEG
 
 ### Descrição do projeto :seedling:
 
-Desenvolver uma aplicação web para fazer uma gestão básica de estoque de uma locadora de filmes.
+- Desenvolver uma aplicação web para fazer uma gestão básica de estoque de uma locadora de filmes.
 
 ### Entidades(+atributos básicos) :pushpin:
 
@@ -34,34 +34,34 @@ Desenvolver uma aplicação web para fazer uma gestão básica de estoque de uma
 
 ### Pré-requisitos :thumbsup:
 
-- JDK 8 e Maven
-- Node e Yarn
-- Pgadmin
-- Eclipse
-- VSCode
+- JDK 8 e Maven (back-end)
+- Node e Yarn (front-end)
+- Eclipse e VSCode (IDE)
 
 ### Foi utilizado :point_down:
 
 - Spring Boot
 - React
 - PostgreSQL
+- Pgadmin
 - JPA
 - Lombok
 - JUnit 5
 - Tokens JWT
 - Bootstrap
 - Bootswatch
+- Toastr
 - Axios
 - Primereact
 - Heroku
 
 ### Scripts do banco :point_down:
 
-CREATE DATABASE desafioeteg
+- CREATE DATABASE desafioeteg
 
-CREATE SCHEMA desafio
+- CREATE SCHEMA desafio
 
-CREATE TABLE desafio.usuario
+- CREATE TABLE desafio.usuario
 (
   id bigserial NOT NULL PRIMARY KEY,
   nome character varying(150),
@@ -70,7 +70,7 @@ CREATE TABLE desafio.usuario
   data_cadastro date default now()
 );
 
-CREATE TABLE desafio.locacao
+- CREATE TABLE desafio.locacao
 (
   id bigserial NOT NULL PRIMARY KEY ,
   filme character varying(100) NOT NULL,
@@ -85,14 +85,14 @@ CREATE TABLE desafio.locacao
 
 ### Instalação da aplicação :point_down:
 
-- Eclipse: Importar backedn como projeto Maven.
-- VSCode: Abrir pasta do frontend
+- Eclipse: Importar back-end como projeto Maven
+- VSCode: Abrir pasta do front-end
     
 ### Iniciar aplicação :point_down:
 
-- Rodar a classe DesafioetegApplication (backend)
-- Rodar `yarn start` na raiz do projeto (frontend)
+- Rodar a classe DesafioetegApplication (back-end)
+- Rodar `yarn start` na raiz do projeto (front-end)
 
 ### URL publicada da aplicação :technologist:
 
-https://desafioeteg.herokuapp.com
+- https://desafioeteg.herokuapp.com
